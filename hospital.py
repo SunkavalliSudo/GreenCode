@@ -1,4 +1,9 @@
 import time
+
+from codecarbon import track_emissions
+
+
+@track_emissions(project_name="mediumCode")
 def count_sunset_buildings_worst(buildings):
     count = 0
     n = len(buildings)
@@ -21,4 +26,4 @@ count = count_sunset_buildings_worst(buildings * 200)
 end_time = time.time()
 worst_time = end_time - start_time
 
-print("Optimized Algorithm Result:", count , "time taken to execute:", worst_time)
+print("Optimized Algorithm Result:", count, "time taken to execute:", worst_time)

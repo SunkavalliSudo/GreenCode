@@ -3,7 +3,7 @@ import time
 from codecarbon import track_emissions
 
 
-@track_emissions(project_name="abc")
+@track_emissions(project_name="worse")
 def count_sunset_buildings_even_worse(buildings):
     count = 0
     n = len(buildings)
@@ -41,7 +41,7 @@ def count_sunset_buildings_even_worse(buildings):
 # Example usage
 buildings = [3, 7, 8, 3, 6, 14, 7, 8, 10, 13, 9, 4]
 start_time = time.time()
-count = count_sunset_buildings_even_worse(buildings * 200)
+count = count_sunset_buildings_even_worse(buildings * 1000)
 end_time = time.time()
 worst_time = end_time - start_time
 

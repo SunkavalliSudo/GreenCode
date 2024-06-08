@@ -2,7 +2,7 @@ import time
 from codecarbon import track_emissions
 
 
-@track_emissions(project_name="xyz")
+@track_emissions(project_name="greenCode")
 def count_sunset_buildings_optimized(buildings):
     count = 0
     max_height = 0
@@ -22,7 +22,7 @@ buildings = [3, 7, 8, 3, 6, 14, 7, 8, 10, 13, 9, 4]
 
 
 start_time = time.time()
-count = count_sunset_buildings_optimized(buildings * 50)
+count = count_sunset_buildings_optimized(buildings * 1000)
 end_time = time.time()
 worst_time = end_time - start_time
 
